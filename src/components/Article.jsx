@@ -1,16 +1,15 @@
 import React from 'react';
 
-
 function Article(props) {
-    const { card, i } = props;
-    const { author, comments, date, points, title } = card;
+    const { author, comments, date, points, title } = props.card;
 
     return (
-        <li className="card" key={i}>
+        <li className="card">
             <a className="card-title"
-                href={card.url}
-                //target=""
-                >
+                href={props.card}
+                target="_blank"
+                rel="noreferrer"
+            >
                 {title}
             </a>
             <p className="card-description">
