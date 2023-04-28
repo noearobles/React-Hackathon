@@ -19,9 +19,14 @@ function App() {
                 data.push({
                     title: e.title,
                     url: e.url,
+                    date: e.created_at,
+                    author: e.author,
+                    points: e.points,
+                    comments: e.num_comments,
                 });
             }
 
+            console.log(data);
             setArticles(data);
         }());
     }, []);
