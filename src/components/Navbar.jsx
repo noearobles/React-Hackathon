@@ -1,15 +1,16 @@
-import Logo from './Logo';
-import SearchBar from './SearchBar';
-import SortButton from './SortButton';
+import Logo from "./Logo";
+import SearchBar from "./SearchBar";
+import SortButton from "./SortButton";
 
-function Display() {
-    return (
-        <main>
-            <Logo />
-            <SearchBar />
-            <SortButton />
-        </main>
-    );
+function Navbar(props) {
+  const { articles, setArticles } = props;
+  return (
+    <nav>
+      <Logo />
+      <SearchBar articles={articles} setArticles={setArticles} />
+      <SortButton articles={articles} setArticles={setArticles} />
+    </nav>
+  );
 }
 
-export default Display;
+export default Navbar;
