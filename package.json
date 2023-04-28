@@ -1,7 +1,5 @@
 {
-    "name": "react-template",
-    "version": "0.0.0",
-    "author": "",
+    "name": "react-hackathon",
     "scripts": {
         "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
         "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
