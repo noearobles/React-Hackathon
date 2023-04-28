@@ -1,8 +1,8 @@
 {
     "name": "react-hackathon",
     "scripts": {
-        "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-        "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
+        "build": "react-scripts build",
+        "start": "react-scripts start"
     },
     "dependencies": {
         "axios": "*",

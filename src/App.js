@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
 import Display from './components/Display';
 import Navbar from './components/Navbar';
 

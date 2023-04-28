@@ -1,4 +1,7 @@
+import React from "react";
+
 function SortButton() {
+  // const { articles, setArticles } = props;
   return (
     <div className="hacker-news-logo">
       <select>
