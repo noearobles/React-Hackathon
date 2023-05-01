@@ -33,7 +33,7 @@ function App() {
 
     return (
         <>
-            <Navbar articles={articles} setArticles={setArticles} />
+            {/* <Navbar articles={articles} setArticles={setArticles} /> */}
             <Display articles={articles} setArticles={setArticles} />
         </>
     );
