@@ -14,7 +14,13 @@ function Article(props) {
         {title}
       </a>
       <p className="card-description">
-        {author} | {date.slice(0, 10)} | {points} points | {comments} comments
+        {author} |{" "}
+        {new Date(date).toLocaleString("en-US", {
+          month: "short",
+          day: "2-digit",
+          year: "numeric",
+        })}{" "}
+        | {points} points | {comments} comments
       </p>
     </li>
   );
