@@ -6,6 +6,7 @@ function Logo() {
         src="//d1sz9gun5ag95e.cloudfront.net/packs/media/images/logo-hn-search-a822432b.png"
         alt="hacker-news-logo"
       />
+      <h1>Hacker News</h1>
     </div>
   );
 }

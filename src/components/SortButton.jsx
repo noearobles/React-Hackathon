@@ -3,9 +3,8 @@ import React from "react";
 function SortButton() {
   // const { articles, setArticles } = props;
   return (
-    <div className="hacker-news-logo">
+    <div>
       <select>
-        <option selected>Date Added</option>
         <option value="0">Newest</option>
         <option value="1">Oldest</option>
       </select>
@@ -14,3 +13,4 @@ function SortButton() {
 }
 
 export default SortButton;
+
