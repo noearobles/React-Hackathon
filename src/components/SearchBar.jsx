@@ -5,8 +5,12 @@ function SearchBar(props) {
   const [filteredData, setFilteredData] = React.useState([]);
   const handleFilter = (e) => {
     const searchWord = e.target.value;
+    if (!searchWord) return setFilteredData(articles);
     const newFilter = articles.filter((item) => {
-      return item.title.toLowerCase().includes(searchWord.toLowerCase());
+      return (
+        item.title.toLowerCase().includes(searchWord.toLowerCase()) ||
+        item.author.toLowerCase().includes(searchWord.toLowerCase())
+      );
     });
     setFilteredData(newFilter);
   };
@@ -16,7 +20,7 @@ function SearchBar(props) {
       <div className="searchInputs">
         <form>
           <label>
-            Search by Article
+            Search by Article or Author
             <input
               type="text"
               placeholder="here"
@@ -30,20 +34,26 @@ function SearchBar(props) {
           {filteredData.map((value, key) => {
             return (
               <li className="card" key={key}>
-              <a className="card-title"
+                <a
+                  className="card-title"
                   href={value.url}
                   //target=""
-                  >
+                >
                   {value.title}
-              </a>
-              <p className="card-description">
-                  {value.author} | {value.date.slice(0, 10)} | {value.points} points | {value.comments} comments
-              </p>
-          </li>
+                </a>
+                <p className="card-description">
+                  {value.author} |  {new Date(value.date).toLocaleString("en-US", {
+          month: "short",
+          day: "2-digit",
+          year: "numeric",
+        })}| {value.points}{" "}
+                  points | {value.comments} comments
+                </p>
+              </li>
             );
           })}
         </div>
-      ):null}
+      ) : null}
     </div>
   );
 }
