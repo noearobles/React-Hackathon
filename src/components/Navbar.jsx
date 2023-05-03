@@ -1,17 +1,16 @@
-import React from "react";
-import Logo from "./Logo";
-import SearchBar from "./SearchBar";
-import SortButton from "./SortButton";
+import Logo from './Logo';
+import SearchBar from './SearchBar';
+import SortButton from './SortButton';
 
-function Navbar(props) {
-  const { articles, setArticles } = props;
-  return (
-    <nav className="nav">
-      <Logo />
-      <SearchBar articles={articles} setArticles={setArticles} />
-      <SortButton articles={articles} setArticles={setArticles} />
-    </nav>
-  );
+export default function Navbar(props) {
+    const { articles, setArticles, setFilteredData } = props;
+
+    return (
+        <nav className="navbar">
+            <Logo />
+            <h1 className="navbar-header">Hacker News</h1>
+            <SearchBar articles={articles} setFilteredData={setFilteredData} />
+            <SortButton articles={articles} setArticles={setArticles} />
+        </nav>
+    );
 }
-
-export default Navbar;

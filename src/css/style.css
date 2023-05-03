@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+:root {
+    --c1: #ff7415;
+    --c2: #fbe3b0;
+}
+
+body {
+    background: #eee;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background: var(--c1);
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.display {
+    margin: auto;
+    margin-bottom: 6rem;
+    padding: 0 6px;
+    position: relative;
+    top: 5rem;
+    width: 90%;
+}
+
+.display__filtered {
+    background: var(--c2);
+    border: 2px dotted black;
+    border-radius: 0 0 1rem 1rem;
+    border-top: none;
+    margin: auto;
+    margin-bottom: 5rem;
+    padding: 1rem 6px 0 6px;
+    position: relative;
+    top: 4rem;
+    width: 90%;
+}
+
+.navbar * {
+    float: left;
+    height: 4rem;
+    margin-right: 1rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-logo {
+    user-select: none;
+}
+
+.navbar-header {
+    color: #111;
+    cursor: default;
+    font-size: 2rem;
+    height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 220px;
+}
+
+.navbar-searchbar {
+    background: #eee;
+    border-radius: 1rem;
+    border-width: 2px;
+    height: 75%;
+    outline: none;
+    padding: 0 1rem;
+    width: calc(100vw - 64px - 220px - 120px - 4rem);
+}
+
+.navbar-searchbar:focus {
+    border-color: crimson;
+}
+
+.navbar-sort {
+    border-radius: 1rem;
+    border-width: 2px;
+    height: 75%;
+    outline: none;
+    padding: .75rem 0;
+    text-align: center;
+    width: 120px;
+}
+
+.navbar-sort:focus {
+    border-color: crimson;
+}
+
+.card {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    color: var(--c1);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.card-title:visited {
+    color: var(--c1);
+}
+
+.card-title:hover {
+    color: crimson;
+}
+
+.card-description {
+    cursor: default;
+    text-transform: lowercase;
+}

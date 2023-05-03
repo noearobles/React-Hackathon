@@ -1,17 +1,11 @@
-import React from "react";
+import Article from './Article';
 
-import Article from "./Article";
-
-function Display(props) {
-  return (
-    <main>
-      <ul>
-        {props.articles.map((card, i) => (
-          <Article key={i} card={card} />
-        ))}
-      </ul>
-    </main>
-  );
+export default function Display(props) {
+    return (
+        <main className={props.isFiltered ? "display__filtered" : "display"}>
+            <ul>
+                {props.articles.map((card, i) => <Article key={i} card={card} />)}
+            </ul>
+        </main>
+    );
 }
-
-export default Display;

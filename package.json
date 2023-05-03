@@ -1,20 +1,14 @@
 {
-    "name": "react-hackathon",
+    "name": "algolia",
     "scripts": {
-        "build": "react-scripts build",
-        "start": "react-scripts start"
+        "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+        "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
     },
     "dependencies": {
         "axios": "*",
         "react": "*",
         "react-dom": "*",
         "react-scripts": "*"
-    },
-    "devDependencies": {
-        "eslint": "*",
-        "eslint-plugin-jsx-a11y": "*",
-        "eslint-plugin-react": "*",
-        "eslint-plugin-react-hooks": "*"
     },
     "browserslist": {
         "development": [

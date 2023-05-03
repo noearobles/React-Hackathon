@@ -6,8 +6,9 @@ import Navbar from './components/Navbar';
 
 axios.defaults.baseURL = 'https://hn.algolia.com/api/v1';
 
-function App() {
+export default function App() {
     const [articles, setArticles] = React.useState([]);
+    const [filteredData, setFilteredData] = React.useState([]);
 
     React.useEffect(() => {
         (async function () {
@@ -32,10 +33,16 @@ function App() {
 
     return (
         <>
-            <Navbar articles={articles} setArticles={setArticles} />
-            <Display articles={articles} setArticles={setArticles} />
+            <Navbar
+                articles={articles}
+                setArticles={setArticles}
+                setFilteredData={setFilteredData}
+            />
+            <Display
+                articles={filteredData.length ? filteredData : articles}
+                setArticles={setArticles}
+                isFiltered={filteredData.length}
+            />
         </>
     );
 }
-
-export default App;

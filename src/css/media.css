@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px) {
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar-searchbar {
+        width: calc(100vw - 64px - 120px - 3rem);
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-searchbar {
+        margin: 0 1rem;
+        width: calc(100vw - 2rem);
+    }
+
+    .navbar-sort {
+        display: none;
+    }
+
+}
