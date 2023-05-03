@@ -14,7 +14,6 @@ function SearchBar(props) {
     });
     setFilteredData(newFilter);
   };
-  console.log(filteredData);
   return (
     <div className="search">
       <div className="searchInputs">
