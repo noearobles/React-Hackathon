@@ -20,10 +20,9 @@ function SearchBar(props) {
       <div className="searchInputs">
         <form>
           <label>
-            Search by Article or Author
             <input
               type="text"
-              placeholder="here"
+              placeholder=" Search by Article or Author"
               onChange={(e) => handleFilter(e)}
             />
           </label>
@@ -34,20 +33,17 @@ function SearchBar(props) {
           {filteredData.map((value, key) => {
             return (
               <li className="card" key={key}>
-                <a
-                  className="card-title"
-                  href={value.url}
-                  //target=""
-                >
+                <a className="card-title" href={value.url}>
                   {value.title}
                 </a>
                 <p className="card-description">
-                  {value.author} |  {new Date(value.date).toLocaleString("en-US", {
-          month: "short",
-          day: "2-digit",
-          year: "numeric",
-        })}| {value.points}{" "}
-                  points | {value.comments} comments
+                  {value.author} |{" "}
+                  {new Date(value.date).toLocaleString("en-US", {
+                    month: "short",
+                    day: "2-digit",
+                    year: "numeric",
+                  })}{" "}
+                  | {value.points} points | {value.comments} comments
                 </p>
               </li>
             );
