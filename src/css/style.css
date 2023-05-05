@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .navbar {
     background: var(--c1);
     height: 4rem;
