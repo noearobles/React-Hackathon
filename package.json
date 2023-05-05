@@ -2,7 +2,7 @@
     "name": "algolia",
     "scripts": {
         "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-        "start": "react-scripts start"
+        "start": "set DISABLE_ESLINT_PLUGIN=true && react-scripts start"
     },
     "dependencies": {
         "axios": "*",
